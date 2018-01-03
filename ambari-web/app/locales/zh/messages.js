@@ -352,6 +352,7 @@ Em.I18n.translations = {
   'common.repositoryType': 'Repository Type',
   'common.rolling.downgrade': '回滚',
   'common.express.downgrade': 'Express Downgrade',
+  'common.critical.error': 'Critical',
 
   'models.alert_instance.tiggered.verbose': '在{0}上发生<br>检查{1}',
   'models.alert_definition.triggered.verbose': 'Occurred on {0}',
@@ -881,7 +882,7 @@ Em.I18n.translations = {
   'installer.step5.header': '分配Master',
   'installer.step5.reassign.header': '选择目标主机',
   'installer.step5.attention': '主机没有运行主服务',
-  'installer.step5.body': '将主组件分配给要在其上运行的主机.',
+  'installer.step5.body': '将主组件分配给主机.',
   'installer.step5.body.coHostedComponents': '<i class="icon-asterisks">&#10037;</i>{0}将安装在同一主机上.',
   'installer.step5.hostInfo': '%@ (%@, %@ cores)',
   'installer.step5.hiveGroup': 'HiveServer2, WebHCat Server, MySQL Server',
@@ -907,7 +908,7 @@ Em.I18n.translations = {
   'installer.step6.validationIssuesAttention': '从组件和客户端组件分配有需要注意的问题.',
 
   'installer.step7.header': '自定义服务',
-  'installer.step7.body': '我们已经为您选择的服务提出了推荐的配置,请根据您的需要自定义.',
+  'installer.step7.body': '我们已经为您选择的服务提供了推荐的配置,请根据您的需要自定义.',
   'installer.step7.attentionNeeded': '<b>注意:</b>继续操作前有些配置需要您重视',
   'installer.step7.noIssues': '所有配置已处理',
   'installer.step7.showPropertiesWithIssues': '显示存在问题的属性',
@@ -929,11 +930,11 @@ Em.I18n.translations = {
   'installer.step7.popup.database.connection.header': '数据库连接的告警',
   'installer.step7.popup.database.connection.body': '您尚未运行或测试通过数据库连接:{0}.强烈建议您在继续操作之前先通过连接测试,以防止部署期间出现故障.',
   'installer.step7.popup.validation.failed.header': '一致性检查失败',
-  'installer.step7.popup.validation.failed.body': '某些服务未正确配置.您必须根据建议的值更改突出显示的配置.',
+  'installer.step7.popup.validation.failed.body': '某些服务未正确配置.您必须根据建议的值更改重点显示的配置.',
   'installer.step7.popup.validation.request.failed.body': '由于未知错误,无法验证配置更改的一致性.您的更改尚未保存,您要继续并保存更改吗?',
   'installer.step7.popup.validation.warning.header': '配置',
-  'installer.step7.popup.validation.warning.body': '某些服务未正确配置. 我们建议您查看并更改突出显示的配置值. 您确定要在不更正配置的情况下继续操作吗?',
-  'installer.step7.popup.validation.error.body': '服务配置导致验证错误,请执行前处理错误信息.',
+  'installer.step7.popup.validation.issues.body': 'The following configuration changes are highly recommended, but can be skipped.',
+  'installer.step7.popup.validation.criticalIssues.body': 'You must correct the following critical issues before proceeding:',
   'installer.step7.popup.oozie.derby.warning': 'Derby不推荐使用. 使用Derby, Oozie Server HA和当前链接支持不稳定',
   'installer.step7.oozie.database.new': '新Derby数据库',
   'installer.step7.hive.database.new.mysql': '新MySQL数据库',
@@ -1059,7 +1060,7 @@ Em.I18n.translations = {
   'installer.step10.startStatus.passed': '所有测试通过了',
   'installer.step10.startStatus.started': '所有服务已启动',
   'installer.step10.installTime.seconds': ' {0} 秒内安装并启动',
-  'installer.step10.installTime.minutes': ' {0} 分 and {1} 秒内安装并启动',
+  'installer.step10.installTime.minutes': ' {0} 分 {1} 秒内安装并启动',
 
   'addHost.step4.header': '配置',
   'addHost.step4.title': '选择添加的主机将属于的配置组.',
@@ -2235,6 +2236,9 @@ Em.I18n.translations = {
   'services.service.config.configHistory.makeCurrent.message': '从服务配置版本创建{0}',
   'services.service.config.configHistory.comparing': '比较',
   'services.service.config.setRecommendedValue': '设置建议',
+  'services.service.config.database.msg.jdbcSetup.detailed': 'To use {0} with Hive, you must <a href="{3}" target="_blank">' +
+    'download the {4} from {0}</a>. Once downloaded to the Ambari Server host, run: <br/>' +
+    '<b>ambari-server setup --jdbc-db={1} --jdbc-driver=/path/to/{1}/{2}</b>',
 
   'services.service.widgets.list-widget.nothingSelected': '没有选择',
 
