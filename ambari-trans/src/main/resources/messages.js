@@ -18,14 +18,14 @@
 
 Em.I18n.translations = {
 
-  'app.name': 'BDP ',
-  'app.name.subtitle': 'BDP - {0}',
-  'app.name.subtitle.experimental': 'BDP 预览版',
-  'app.reloadPopup.link': '重新加载页面',
-  'app.reloadPopup.text': '正在尝试连接服务器...',
-  'app.reloadPopup.noClusterName.text': '检索集群名失败,重新加载中...',
-  'app.reloadPopup.header': '重新加载页面',
-  'app.redirectIssuePopup.header': '登录重定向问题',
+  'app.name':'Ambari',
+  'app.name.subtitle':'Ambari - {0}',
+  'app.name.subtitle.experimental':'Ambari Experimental',
+  'app.reloadPopup.link': 'Reload Page',
+  'app.reloadPopup.text': 'Trying to connect to server...',
+  'app.reloadPopup.noClusterName.text': 'Failed to retrieve cluster name, trying to reload...',
+  'app.reloadPopup.header': 'Reload Page',
+  'app.redirectIssuePopup.header': 'Login Redirect Issue',
   'app.redirectIssuePopup.body': 'For single sign-on, make sure that Knox Gateway and Ambari Server are located on the same host or subdomain.' +
     '<br/>Alternatively login as an Ambari local user using the local login page.<br />' +
     '<a href="{0}" target="_blank">{0}</a>',
@@ -352,6 +352,7 @@ Em.I18n.translations = {
   'common.repositoryType': 'Repository Type',
   'common.rolling.downgrade': 'Rolling Downgrade',
   'common.express.downgrade': 'Express Downgrade',
+  'common.critical.error': 'Critical',
 
   'models.alert_instance.tiggered.verbose': "Occurred on {0} <br> Checked on {1}",
   'models.alert_definition.triggered.verbose': "Occurred on {0}",
@@ -932,8 +933,8 @@ Em.I18n.translations = {
   'installer.step7.popup.validation.failed.body': 'Some services are not properly configured. You have to change the highlighted configs according to the recommended values.',
   'installer.step7.popup.validation.request.failed.body': 'The configuration changes could not be validated for consistency due to an unknown error.  Your changes have not been saved yet.  Would you like to proceed and save the changes?',
   'installer.step7.popup.validation.warning.header': 'Configurations',
-  'installer.step7.popup.validation.warning.body': 'Some service configurations are not configured properly. We recommend you review and change the highlighted configuration values. Are you sure you want to proceed without correcting configurations?',
-  'installer.step7.popup.validation.error.body': 'Service configurations resulted in validation errors. Please address them before proceeding.',
+  'installer.step7.popup.validation.issues.body': 'The following configuration changes are highly recommended, but can be skipped.',
+  'installer.step7.popup.validation.criticalIssues.body': 'You must correct the following critical issues before proceeding:',
   'installer.step7.popup.oozie.derby.warning': 'Derby is not recommended for production use. With Derby, Oozie Server HA and concurrent connection support will not be available.',
   'installer.step7.oozie.database.new': 'New Derby Database',
   'installer.step7.hive.database.new.mysql': 'New MySQL Database',
@@ -2235,6 +2236,9 @@ Em.I18n.translations = {
   'services.service.config.configHistory.makeCurrent.message': 'Created from service config version {0}',
   'services.service.config.configHistory.comparing': 'Comparing',
   'services.service.config.setRecommendedValue': 'Set Recommended',
+  'services.service.config.database.msg.jdbcSetup.detailed': 'To use {0} with Hive, you must <a href="{3}" target="_blank">' +
+    'download the {4} from {0}</a>. Once downloaded to the Ambari Server host, run: <br/>' +
+    '<b>ambari-server setup --jdbc-db={1} --jdbc-driver=/path/to/{1}/{2}</b>',
 
   'services.service.widgets.list-widget.nothingSelected': 'Nothing selected',
 
